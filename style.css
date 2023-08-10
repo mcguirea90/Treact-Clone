@@ -27,6 +27,11 @@ h1, h2, h4, h5 {
     font-weight: 700;
 }
 
+h3 {
+    line-height: 1.5;
+    font-weight: 500;
+}
+
 li {
     list-style-type: none;
 }
@@ -103,7 +108,7 @@ li {
 /* Menu */
 .btn_menu {
     background-color: transparent;
-    font-size: 40px;
+    font-size: 20px;
     text-align: center;
     border: none;
     color: rgb(100 21 255);
@@ -113,18 +118,22 @@ li {
 .menu_backdrop {
     position: absolute;
     background-color: white;
+    border-radius: 8px;
+    border: 1px solid gray;
+    padding: 32px;
+    margin: 24px 16px;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 100;
-    display: flex;
+    height: fit-content;
    justify-content: center;
    align-items: center;
    transition: all 300ms ease;
    visibility: hidden;
    opacity: 0;
-   color: rgb(100 21 255);
+   color: black;
 }
 
 .menu--open .menu_backdrop {
@@ -132,10 +141,7 @@ li {
     opacity: 1;
 }
 
-.menu--open {
-    max-height: 100vh;
-    overflow-y: hidden;
-}
+
 
 .menu_links {
     display: flex;
@@ -148,7 +154,13 @@ li {
 }
 
 .menu_link {
-    font-size: 40px;
+    font-size: 20px;
+    color: black;
+}
+
+.menu_link:hover {
+    text-decoration: underline;
+    color: purple;
 }
 
 .btn_menu-close {
@@ -179,6 +191,7 @@ li {
     display: flex;
     flex-direction: column;
     max-width: 40%;
+    text-align: center;
 }
 
 .header_title {
@@ -323,8 +336,8 @@ input {
 }
 
 .quality_btn {
-    width: 30%;
     margin-top: 40px;
+    
 }
 
 .quality_img {
@@ -553,6 +566,14 @@ input {
     border-top: 8px solid rgb(245, 101, 101);
 }
 
+.pricing_center {
+    text-align: center;
+}
+
+.pricing_description {
+    margin-bottom: 20px;
+}
+
 .price_title {
     padding: 32px 0 ;
     display: flex;
@@ -588,7 +609,9 @@ color: rgb(100 21 255);
 .price_ent-btn {
     background-color: rgb(245, 101, 101);
 }
+
 /* Testimonials */ 
+
 #testimonial {
     display: flex;
     flex-wrap: wrap;
@@ -602,6 +625,7 @@ color: rgb(100 21 255);
 
 .testimonial_right {
     max-width: 50%;
+    text-align: center;
 }
 
 .testimonial_img {
@@ -806,7 +830,7 @@ color: rgb(100 21 255);
 
     .quality_wrapper {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
 
@@ -814,6 +838,8 @@ color: rgb(100 21 255);
     .quality_right {
         max-width: 100%;
     }
+
+
 
     .steps_wrapper {
         display: flex;
@@ -826,9 +852,20 @@ color: rgb(100 21 255);
         max-width: 100%;
     }
 
+    .quality_right,
+    .quality_left {
+        text-align: center;
+    }
+
+    .box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .values_wrapper {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
 
@@ -837,6 +874,28 @@ color: rgb(100 21 255);
         width: 100%;
     }
 
+    .values_principles {
+        flex-direction: column;
+    }
+
+    .values_principle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .values_description-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .principle_para {
+        text-align: center;
+    }
+ 
     .testimonial_wrapper {
         display: flex;
         flex-direction: column;
@@ -860,6 +919,10 @@ color: rgb(100 21 255);
         justify-content: center;
         padding-top: 20px;
     }
+
+    .trademark {
+        flex-direction: column;
+    }
 }
 
 
@@ -882,20 +945,37 @@ color: rgb(100 21 255);
 
     .features_services {
         width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features_text-wrapper {
+        padding-top: 10px;
     }
 
     .header_input {
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding-top: 20px;
+        justify-content: center;
+        border: none;
     }
 
-   
-    .quality_btn {
+    .header_btn {
         width: 100%;
-        margin-bottom: 40px;
     }
+    
+    .email_input {
+        width: 100%;
+        border: 2px solid rgb(226, 232, 240);
+        text-align: center;
+        margin-left: 0;
+        border-radius: 50px;
+        padding: 20px 0;
+    }
+
+    
     .start_buttons {
         display: flex;
         flex-direction: column;
